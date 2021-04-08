@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styles from "../styles/Home.module.css";
 
+// npm run dev to start on localhost:3000
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -50,7 +52,6 @@ export default function Home() {
           </a>
         </div>
       </main>
-
       <Footer />
     </div>
   );
