@@ -1,7 +1,7 @@
 .footer {
   position: bottom;
   top: 0;
-  width: 100vm;
+  width: 100vw;
   height: 50px;
   background-color: #fff;
   border-top: 1px solid darkorange;
@@ -12,6 +12,6 @@
 }
 
 .logo {
-  height: 2em;
+  height: 3em;
   margin: 5px;
 }
