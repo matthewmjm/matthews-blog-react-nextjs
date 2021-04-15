@@ -7,8 +7,8 @@ import { getSortedPostsData } from "../lib/getPosts";
 // npm run dev to start on localhost:3000
 
 export async function getStaticProps() {
-  // const allPostsData = await getSortedPostsData()
-  const allPostsData = getSortedPostsData();
+  const allPostsData = await getSortedPostsData();
+  // const allPostsData = getSortedPostsData();
   return {
     props: {
       allPostsData,
@@ -33,17 +33,25 @@ export default function Home({ allPostsData }) {
           {/* {<code className={styles.code}>pages/index.js</code> } */}
         </p>
 
-        <div>
+        <div className={styles.container}>
           <h1>Striking Architecture</h1>
           <h2>Blogs</h2>
           <ul className="postsList">
-            {allPostsData.map(({ id, date, title, image, excerpt }) => {
-              <li key={id}>
-                <h4>{date}</h4>
-                <h3>{title}</h3>
-                <img src={image} alt="Picture of Building" />
-              </li>;
-            })}
+            {allPostsData.map(
+              ({ id, date, title, image, excerpt, content }) => (
+                <li key={id}>
+                  <h4>{date}</h4>
+                  <h3>{title}</h3>
+                  <img
+                    src={image}
+                    width="400"
+                    height="400"
+                    alt="Picture of Building"
+                  />
+                  <h4>{excerpt}</h4>
+                </li>
+              )
+            )}
           </ul>
         </div>
       </main>
