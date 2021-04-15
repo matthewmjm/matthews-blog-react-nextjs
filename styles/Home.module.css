@@ -7,6 +7,12 @@
   align-items: center;
 }
 
+.postsList li {
+  list-style: none;
+  padding-top: 50px;
+  width: 60%;
+}
+
 .main {
   padding: 5rem 0;
   flex: 1;

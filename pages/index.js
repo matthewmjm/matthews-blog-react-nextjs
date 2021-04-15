@@ -1,13 +1,34 @@
-import Head from "next/head";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import styles from "../styles/Home.module.css";
+import Head from "next/head"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+import styles from "../styles/Home.module.css"
+import { getSortedPostsData } from "../lib/getPosts"
 
 // npm run dev to start on localhost:3000
 
-export default function Home() {
+// export async function getStaticProps() {
+//   const allPostsData = await getSortedPostsData()
+//   return {
+//     props: {
+//       allPostsData,
+//     },
+//   }
+// }
+
+export default function Home({ allPostsData }) {
   return (
     <div className={styles.container}>
+      {/* <h1>Striking Architecture</h1>
+      <h2>Blogs</h2>
+      <ul className="postsList">
+        {allPostsData.map(({ id, date, title, image, excerpt }) => {
+          ;<li key={id}>
+            <h4>{date}</h4>
+            <h3>{title}</h3>
+            <img src="{image}" alt="Building" />
+          </li>
+        })}
+      </ul> */}
       <Head>
         <title>Matthew's Blog</title>
         <link rel="icon" href="/favicon.ico" />
@@ -19,7 +40,7 @@ export default function Home() {
 
         <p className={styles.description}>
           A Personal Blog
-          {/* <code className={styles.code}>pages/index.js</code> */}
+          {/* {<code className={styles.code}>pages/index.js</code> } */}
         </p>
 
         <div className={styles.grid}>
@@ -54,5 +75,5 @@ export default function Home() {
       </main>
       <Footer />
     </div>
-  );
+  )
 }
