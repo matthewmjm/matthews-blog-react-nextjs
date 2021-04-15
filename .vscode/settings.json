@@ -1,18 +1,18 @@
 {
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
+  // "emmet.includeLanguages": {
+  //   "javascript": "javascriptreact"
+  // },
 
-  "[javascript]": {
-    "editor.formatOnSave": true
-  },
-  "prettier.semi": false,
+  // "[javascript]": {
+  //   "editor.formatOnSave": true
+  // },
+  // "prettier.semi": false,
 
   "workbench.colorCustomizations": {
     "titleBar.activeForeground": "#000000",
     "titleBar.inactiveForeground": "#000000CC",
     "titleBar.activeBackground": "#e0bf03",
     "titleBar.inactiveBackground": "#e0bf03CC"
-  },
-  "editor.tabSize": 2
+  }
+  // "editor.tabSize": 2
 }

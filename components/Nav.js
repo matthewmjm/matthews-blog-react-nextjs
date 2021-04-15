@@ -19,6 +19,11 @@ export default function Nav() {
           <a>Blog</a>
         </Link>
       </li>
+      <li>
+        <Link href="./photo">
+          <a>Photo</a>
+        </Link>
+      </li>
     </ul>
   )
 }
